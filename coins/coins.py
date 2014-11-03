@@ -22,7 +22,7 @@ def check_denomination():
     if T[target] == 9001:
         print "not possible"
     else:
-        print T[target]
+        print T[target][0]
 
 t = int(raw_input())
 for i in range(t):
