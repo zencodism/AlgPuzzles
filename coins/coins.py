@@ -19,7 +19,7 @@ def check_denomination():
                 if tmp <= target and T[i][0] + 1 < T[tmp][0]:
                     T[x*x + y*y] = (T[i][0] + 1, x, y) 
 
-    if T[target] == 9001:
+    if T[target][0] == 9001:
         print "not possible"
     else:
         print T[target][0]

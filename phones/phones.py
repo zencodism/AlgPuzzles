@@ -8,6 +8,8 @@ def check_list():
         if store[digit] == 1:
             return False
         if position+1 == len(number):
+            if len(store[digit]) > 0:
+                return False
             store[digit] = 1
             return True
         else:
