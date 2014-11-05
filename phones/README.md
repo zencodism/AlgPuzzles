@@ -1,10 +1,10 @@
 Input data format:
 
-[number of test cases, single integer]
+[number of test cases, single integer 0 < t <= 40]
 
 For each test case:
 
-[number of phone numbers to check]
+[number of phone numbers to check 1 <= n <= 10000]
 
 For each phone number:
 
