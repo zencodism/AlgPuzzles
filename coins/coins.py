@@ -11,14 +11,18 @@ def check_denomination():
 
     for i in range(n):
         values = raw_input().split(' ')
+        x = int(values[0])
+        y = int(values[1])
+        tmp = x*x + y*y
+        X = x
+        Y = y
         for i in range(target):
             if T[i][0] != 9001:
-                x = T[i][1] + int(values[0])
-                y = T[i][2] + int(values[1])
+                x = X + T[i][1]
+                y = Y + T[i][2]
                 tmp = x*x + y*y
                 if tmp <= target and T[i][0] + 1 < T[tmp][0]:
-                    T[x*x + y*y] = (T[i][0] + 1, x, y) 
-
+                    T[tmp] = (T[i][0] + 1, x, y) 
     if T[target][0] == 9001:
         print "not possible"
     else:
